@@ -4,6 +4,7 @@ Required Tests:
 - [ ] verify that preceding passage
 '''
 
+import pytest
 from web_scraper import __version__
 from web_scraper.scraper import get_citations_needed_count, get_citations_needed_report
 
@@ -17,6 +18,7 @@ def test_get_citations_needed_count():
     expected = 3
     assert actual == expected
 
+@pytest.mark.skip("pending")
 def test_get_citations_needed_report():
     url = "https://en.wikipedia.org/wiki/Times_Beach,_Missouri"
     actual = get_citations_needed_report(url)
