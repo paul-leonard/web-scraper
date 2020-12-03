@@ -1,6 +1,6 @@
 '''
 Required Tests:
-- [ ] verify that correct count of citations needed is calculated
+- [x] verify that correct count of citations needed is calculated
 - [ ] verify that preceding passage
 '''
 
