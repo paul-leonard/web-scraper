@@ -1,7 +1,7 @@
 '''
 Required Tests:
 - [x] verify that correct count of citations needed is calculated
-- [ ] verify that preceding passage
+- [ ] verify that preceding passage  *it gets the same passages when I print it out... but test is not working
 '''
 
 import pytest

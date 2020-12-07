@@ -1,8 +1,8 @@
 '''
 Feature Requirements:
 - [x] get_citations_needed_count:  takes in a url and returns an integer
-- [ ] get_citations_needed_report:  takes in a url and returns a string
-- [ ] the string should be formatted with each citation needed on own line, in order found.
+- [x] get_citations_needed_report:  takes in a url and returns a string
+- [x] the string should be formatted with each citation needed on own line, in order found.
 '''
 
 import requests
@@ -30,12 +30,8 @@ def get_citations_needed_report(url):
   for citation_needed in all_citations_needed:
     p_tag = citation_needed.find_parent('p')
     string_of_passages += p_tag.text.strip()
-    # passage_to_add = p_tag.stripped_strings
-    # string_of_passages += passage_to_add
     string_of_passages += "\n\n"
-    # print("*********printing string of passages:  *************")
-    # print(string_of_passages)
-    # print("*********printing string of passages:  *************")
+
   return string_of_passages
 
 
@@ -47,12 +43,12 @@ def get_citations_needed_report(url):
 
 
 
-
 if __name__ == "__main__":
   url = 'https://en.wikipedia.org/wiki/Times_Beach,_Missouri'
-  print(get_citations_needed_count(url))
+  print("count of citations needed is: ",get_citations_needed_count(url))
+  print("")
   print(get_citations_needed_report(url))
-  print("above is ACTUAl.... below is expected ******")
+  print("****** above is ACTUAl ****** below is EXPECTED ******\n\n")
   expected = '''In its early years, the town was primarily a summer resort, but the Great Depression combined with gasoline rationing during World War II reduced the feasibility of summer homes.[4] The town became a community of mostly low-income housing, and a small population (1,240) lived in Times Beach by 1970.[4] In the years immediately before its evacuation, Times Beach had become a lower-middle-class town.[4] Historically, there had always been a small grocery store and gas station on Route 66 to serve the residents.[citation needed]
 
   In May and June 1982, the EPA decided to revisit the Shenandoah, Timberline, and Bubbling Springs stables, as well as the Minker and Stout properties. New soil samples revealed that concentrations of dioxin had not decreased since the last test results obtained by the CDC several years earlier. Although more than ten years had passed since the spraying, areas in the Shenandoah arena still contained as much as 1.8 ppm of dioxin. Regional EPA officials advised owners of the contaminated stables to temporarily close, and urged the national EPA office to begin cleanup operations at each of the contaminated locations. These cleanup requests were delayed when Rita Lavelle, an assistant administrator at EPA headquarters in Washington, announced that the EPA would be collecting and testing an additional six hundred soil samples in order to better understand the extent of contamination.[citation needed]
