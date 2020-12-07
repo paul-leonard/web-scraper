@@ -18,7 +18,7 @@ def test_get_citations_needed_count():
     expected = 3
     assert actual == expected
 
-@pytest.mark.skip("pending")
+# @pytest.mark.skip("pending")
 def test_get_citations_needed_report():
     url = "https://en.wikipedia.org/wiki/Times_Beach,_Missouri"
     actual = get_citations_needed_report(url)
